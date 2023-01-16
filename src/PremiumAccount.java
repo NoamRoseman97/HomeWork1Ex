@@ -1,20 +1,13 @@
-public class StandardAccount implements IAccount{
+public class PremiumAccount implements IAccount {
+
 
     //State
     int AccountNum;
-    double CreditLim;
-
 
     //Constructor
-    public StandardAccount(int accountNumber, double creditLimit) {
+    public PremiumAccount(int accountNumber) {
         this.AccountNum = accountNumber;
-        this.CreditLim = creditLimit;
-
     }
-
-
-
-
 
 
 
