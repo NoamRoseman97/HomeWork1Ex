@@ -4,9 +4,12 @@ public class PremiumAccount implements IAccount {
     //State
     int AccountNum;
 
+    double balance;
+
     //Constructor
     public PremiumAccount(int accountNumber) {
         this.AccountNum = accountNumber;
+        this.balance = 0;
     }
 
 
