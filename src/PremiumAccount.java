@@ -1,7 +1,7 @@
 public class PremiumAccount implements IAccount {
 
     //State
-    double balance;
+    double Balance;
     int AccountNum;
 
 
@@ -9,29 +9,36 @@ public class PremiumAccount implements IAccount {
     //Constructor
     public PremiumAccount(int accountNumber) {
         this.AccountNum = accountNumber;
-        this.balance = 0;
+        this.Balance = 0;
     }
 
 
 
-    //Behaviour
+
+
+    // Behaviour
+
     @Override
     public void Deposit(double amount) {
-
+        Balance += amount;
     }
 
     @Override
     public double Withdraw(double amount) {
-        return 0;
+        Balance -= amount;
+        return amount;
     }
 
     @Override
     public double GetCurrentBalance() {
-        return 0;
+        return Balance;
     }
 
     @Override
     public int GetAccountNumber() {
-        return 0;
+        return AccountNum;
     }
 }
+
+
+
