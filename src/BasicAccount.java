@@ -1,16 +1,23 @@
 public class BasicAccount implements IAccount{
 
     //State
+    double Balance;
     int AccountNum;
-    double WithdrawlLim;
+    double WithdrawLim;
+
 
     //Constructor
-    public BasicAccount (int accountNumber, double withdrawlLimit) {
+    public BasicAccount (int accountNumber, double withdrawLimit) {
         this.AccountNum = accountNumber;
-        this.WithdrawlLim = withdrawlLimit;
-
+        this.WithdrawLim = withdrawLimit;
+         this.Balance = 0;
 
     }
+
+
+
+
+
 
 
 

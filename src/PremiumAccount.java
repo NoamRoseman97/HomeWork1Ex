@@ -1,10 +1,10 @@
 public class PremiumAccount implements IAccount {
 
-
     //State
+    double balance;
     int AccountNum;
 
-    double balance;
+
 
     //Constructor
     public PremiumAccount(int accountNumber) {

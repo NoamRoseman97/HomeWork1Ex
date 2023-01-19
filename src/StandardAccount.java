@@ -1,6 +1,7 @@
 public class StandardAccount implements IAccount{
 
     //State
+    double Balance;
     int AccountNum;
     double CreditLim;
 
@@ -8,11 +9,13 @@ public class StandardAccount implements IAccount{
     //Constructor
     public StandardAccount(int accountNumber, double creditLimit) {
         this.AccountNum = accountNumber;
-        this.CreditLim = creditLimit;
-
+        this.Balance = 0;
+        if (CreditLim > 0) {
+            this.CreditLim = 0;
+        }else {
+            this.CreditLim = creditLimit;
+        }
     }
-
-
 
 
 
