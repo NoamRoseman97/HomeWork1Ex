@@ -6,6 +6,7 @@ public class Bank implements IBank
     List<IAccount> Accounts;
     public Bank() {
         Accounts = new ArrayList<>();
+
     }
 
     @Override
@@ -28,7 +29,7 @@ public class Bank implements IBank
                 }
                 else
                 {
-                    // prints error message
+                    System.out.println("The account is not closed due to debt");
                 }
 
                 return;
@@ -43,11 +44,30 @@ public class Bank implements IBank
 
     @Override
     public List<IAccount> GetAllAccountsInDebt() {
-        return null;
+        List <IAccount> negativeBalance;
+        negativeBalance = new ArrayList<>();
+        for (int i = 0; i < Accounts.size(); i++)
+        {
+            if (Accounts.get(i).GetCurrentBalance() < 0)
+            {
+                negativeBalance.add(Accounts.get(i));
+            }
+        }
+        return negativeBalance;
     }
 
     @Override
     public List<IAccount> GetAllAccountsWithBalance(double balanceAbove) {
-        return null;
+        List <IAccount> positiveBalance;
+         positiveBalance = new ArrayList<>();
+        for (int i = 0; i < Accounts.size(); i++)
+        {
+            if (Accounts.get(i).GetCurrentBalance() > 0)
+            {
+                positiveBalance.add(Accounts.get(i));
+            }
+        }
+
+        return positiveBalance;
     }
 }
