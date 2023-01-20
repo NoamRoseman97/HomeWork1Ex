@@ -14,7 +14,6 @@ public class StandardAccount implements IAccount{
         {
             this.CreditLim = 0;
         }
-
         else
         {
             this.CreditLim = creditLimit;
@@ -26,35 +25,21 @@ public class StandardAccount implements IAccount{
     @Override
     public void Deposit(double amount)
     {
-        if (CreditLim > amount)
-        {
-            this.Balance += amount;
-        }
-        else
-        {
-            this.Balance += this.CreditLim;
-        }
+        this.Balance += amount;
     }
 
 
     @Override
     public double Withdraw(double amount) {
-            if (this.Balance == this.CreditLim)
-            {
-                return 0;
-            }
-
-            else if (amount > this.Balance - this.CreditLim)
-            {
-                return this.Balance - this.CreditLim;
-            }
-
-            else
-            {
-                this.Balance = this.Balance - amount;
-                return amount;
-            }
+        double maxWithdrawal = Balance - CreditLim;
+        if (amount > maxWithdrawal) {
+            amount = maxWithdrawal;
         }
+        Balance -= amount;
+        return amount;
+    }
+
+
 
     @Override
     public double GetCurrentBalance()

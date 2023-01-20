@@ -24,17 +24,14 @@ public class BasicAccount implements IAccount{
     @Override
     public double Withdraw(double amount) // method argument
     {
-        double curAmount = 0; // local variable
-        if (amount > WithdrawLim)
-        {
-            curAmount = WithdrawLim;
+        if (amount > WithdrawLim) {
+            amount = WithdrawLim;
         }
-        if (amount > Balance)
-        {
-            curAmount = Balance;
+        if (amount > Balance) {
+            amount = Balance;
         }
-        Balance -= curAmount;
-        return curAmount;
+        Balance -= amount;
+        return amount;
     }
 
 
