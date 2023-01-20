@@ -14,7 +14,6 @@ public class BasicAccount implements IAccount{
     }
 
 
-
     //Behaviour
     @Override
     public void Deposit(double amount) {

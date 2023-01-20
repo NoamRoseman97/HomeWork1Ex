@@ -17,11 +17,11 @@ public class Bank implements IBank
     @Override
     public void CloseAccount(int accountNumber) {
         // a1 -> a2 -> a3 -> a4 -> ....
-        for (int i = 0; i < Accounts.size(); i++)
+        for (int i = 0; i < Accounts.size(); i++)               //iterate from the first to the last index.
         {
-            if (Accounts.get(i).GetAccountNumber() == accountNumber)
+            if (Accounts.get(i).GetAccountNumber() == accountNumber)            //if we reached our requested accountnum
             {
-                IAccount account = Accounts.get(i);
+                IAccount account = Accounts.get(i);         // get it
 
                 if (account.GetCurrentBalance() >= 0)
                 {
