@@ -3,10 +3,9 @@ import java.util.List;
 
 public class Bank implements IBank
 {
-    List<IAccount> Accounts;
+    List<IAccount> Accounts; //we'll use 'IAccount' (not array) as it will implement more than one type of account
     public Bank() {
         Accounts = new ArrayList<>();
-
     }
 
     @Override

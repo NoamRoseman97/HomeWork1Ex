@@ -40,7 +40,6 @@ public class StandardAccount implements IAccount{
     }
 
 
-
     @Override
     public double GetCurrentBalance()
     {
